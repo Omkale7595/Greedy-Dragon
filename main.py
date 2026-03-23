@@ -16,9 +16,9 @@ async def main():
     global meat_pickup, dragon_wings, dragon_death, start, start_rect, score_board, new_font
     global title_text, title_text_rect, start_game_event, game_timer_event
 
-    import game.assets.image as image #
+    import dragon_game.assets.image as image #
 
-    dis_s = pygame.display.set_mode()
+    dis_s = pygame.display.set_mode(1080,2150))
     surface = pygame.Surface((10000, 10000), pygame.SRCALPHA)
     pygame.display.set_caption("Dragon game")
 
@@ -84,13 +84,13 @@ async def main():
     return_img, return_img_rect = image.image("dragon_game/return.png", (450, 900))
     home_img, home_img_rect = image.image("dragon_game/home.png", (650, 900))
 
-    bg_music = pygame.mixer.Sound('dragon_game/music.wav')
+    bg_music = pygame.mixer.Sound('dragon_game/music.ogg')
     bg_music.play(-1, 0, 0)
-    click = pygame.mixer.Sound('dragon_game/click.wav')
-    coin_pickup = pygame.mixer.Sound('dragon_game/pickup.wav')
-    meat_pickup = pygame.mixer.Sound('dragon_game/meat_pickup.wav')
-    dragon_wings = pygame.mixer.Sound('dragon_game/dragon_wings.mp3')
-    dragon_death = pygame.mixer.Sound('dragon_game/dragon_death.mp3')
+    click = pygame.mixer.Sound('dragon_game/click.ogg')
+    coin_pickup = pygame.mixer.Sound('dragon_game/pickup.ogg')
+    meat_pickup = pygame.mixer.Sound('dragon_game/meat_pickup.ogg')
+    dragon_wings = pygame.mixer.Sound('dragon_game/dragon_wings.ogg')
+    dragon_death = pygame.mixer.Sound('dragon_game/dragon_death.ogg')
 
     start, start_rect = image.image("dragon_game/start.png", (550, 1000), True, 0)
     score_board = pygame.font.SysFont('calibri', 64)
@@ -315,3 +315,4 @@ async def main():
 
 # 4. Start the Async Loop
 asyncio.run(main()) #
+
