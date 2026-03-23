@@ -1,6 +1,7 @@
 import pygame, random
 import asyncio # REQUIRED for web
 
+pygame.mixer.init()
 # 1. Initialize Pygame at the top level
 pygame.init()
 
@@ -19,7 +20,7 @@ async def main():
     import dragon_game.assets.image as image #
 
     dis_s = pygame.display.set_mode((1080,2150))
-    surface = pygame.Surface((10000, 10000), pygame.SRCALPHA)
+    surface = pygame.Surface((1080, 2150), pygame.SRCALPHA)
     pygame.display.set_caption("Dragon game")
 
     pygame.draw.rect(surface, (128, 128, 128, 180), (0, 0, 1100, 2150))
@@ -48,7 +49,7 @@ async def main():
     score = 0
     high_score = 0
     Velocity = 5
-    timer = 6
+    timer = 60
 
     # Colors
     White = (255, 255, 255)
