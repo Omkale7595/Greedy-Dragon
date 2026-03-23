@@ -18,7 +18,7 @@ async def main():
 
     import dragon_game.assets.image as image #
 
-    dis_s = pygame.display.set_mode(1080,2150))
+    dis_s = pygame.display.set_mode((1080,2150))
     surface = pygame.Surface((10000, 10000), pygame.SRCALPHA)
     pygame.display.set_caption("Dragon game")
 
